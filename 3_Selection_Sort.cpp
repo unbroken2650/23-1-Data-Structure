@@ -10,6 +10,10 @@ const int NSIZE = 10;
 
 int main()
 {
+	string name = "Suho Han";
+	int number = 20192650;
+
+	cout << number << " " << name << endl;
 	cout << "Sorting program" << endl;
 	int sampleArray[NSIZE], numberUsed;
 	fillArray(sampleArray, NSIZE, numberUsed);
