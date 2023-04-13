@@ -1,6 +1,0 @@
-﻿  CPerson.cpp
-  QuickSort_Class.cpp
-C:\Users\hansu\OneDrive - 숭실대학교 - Soongsil University\3학년 1학기\자료구조\DS Examples\QuickSort\QuickSort\QuickSort_Class.cpp(3,10): warning C4067: 전처리기 지시문 다음에 예기치 않은 토큰이 있습니다. 줄 바꿈 문자가 필요합니다.
-  코드를 생성하고 있습니다...
-QuickSort_Class.obj : error LNK2019: "class std::basic_ostream<char,struct std::char_traits<char> > & __cdecl operator<<(class std::basic_ostream<char,struct std::char_traits<char> > &,class CPerson const &)" (??6@YAAAV?$basic_ostream@DU?$char_traits@D@std@@@std@@AAV01@ABVCPerson@@@Z)"int __cdecl partition(class CPerson * const,int,int)" (?partition@@YAHQAVCPerson@@HH@Z) 함수에서 참조되는 확인할 수 없는 외부 기호
-C:\Users\hansu\OneDrive - 숭실대학교 - Soongsil University\3학년 1학기\자료구조\DS Examples\QuickSort\Debug\QuickSort.exe : fatal error LNK1120: 1개의 확인할 수 없는 외부 참조입니다.
