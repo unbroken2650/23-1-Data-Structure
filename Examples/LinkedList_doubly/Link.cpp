@@ -1,5 +1,7 @@
-#include "Link.h"
+#include "List.h"
 #include <assert.h>
+#include <iostream>
+using namespace std;
 
 List::List() {
 	head = 0;
@@ -11,12 +13,12 @@ void List::insert(const ListElementType& elem)
 	Link addedNode = new Node;
 	assert(addedNode);
 	addedNode->elem = elem;
-	addedNode->next= head;
+	addedNode->next = head;
 	if (head) {
 		head->prev = addedNode;
 	}
 	addedNode->prev = 0;
-	head = addedNode;	
+	head = addedNode;
 }
 
 bool List::previous(ListElementType& elem) {
@@ -47,16 +49,17 @@ bool List::next(ListElementType& elem) {
 
 
 bool List::first(ListElementType& elem) {
-	assert(head);
-	if (head->next == 0) {
+	if (head == 0)
+	{
 		return false;
 	}
 	else {
-		current = head->next;
-		elem = current->elem;
+		elem = head->elem;
+		current = head;
 		return true;
 	}
 }
+
 
 bool List::last(ListElementType& elem) {
 	assert(head);
