@@ -1,7 +1,7 @@
 ﻿#include <iostream>
 using namespace std;
 
-void fillArray(int* a, int size, int& sizeOfArray);
+void fillArray(int *a, int size, int &sizeOfArray);
 int partition(int a[], int first, int last);
 void quicksort(int a[], int first, int last);
 void swapElements(int a[], int first, int second);
@@ -19,10 +19,10 @@ int main()
 
 void quicksort(int a[], int first, int last)
 {
-	if(first >= last)
+	if (first >= last)
 		return;
 	int split(partition(a, first, last));
-	quicksort(a, first, split-1);
+	quicksort(a, first, split - 1);
 	quicksort(a, split + 1, last);
 }
 
@@ -37,9 +37,15 @@ int partition(int a[], int first, int last)
 	cout << endl;
 	for (i = first + 1; i <= last; i++)
 	{
-		if (a[i] <= a[first]) {
+		if (a[i] <= a[first])
+		{
 			++lastSmall;
 			swapElements(a, lastSmall, i);
+			for (int i = first; i < last; i++)
+			{
+				cout << a[i] << " ";
+			}
+			cout << endl;
 		}
 	}
 	swapElements(a, first, lastSmall);
@@ -60,10 +66,10 @@ void swapElements(int a[], int first, int second)
 	a[second] = temp;
 }
 
-void fillArray(int a[], int size, int& sizeOfArray)
+void fillArray(int a[], int size, int &sizeOfArray)
 {
 	cout << " enter up to " << size << " nonnegative whole numbers" << endl
-		<< "Mark the end of the list with a negative number" << endl;
+			 << "Mark the end of the list with a negative number" << endl;
 	int next, index = 0;
 	cin >> next;
 	while ((next >= 0) && (index < size))
@@ -72,8 +78,7 @@ void fillArray(int a[], int size, int& sizeOfArray)
 		index++;
 		cin >> next;
 	}
-	sizeOfArray = index -1;
-
+	sizeOfArray = index - 1;
 }
 
 void printArray(int a[], int first, int last)

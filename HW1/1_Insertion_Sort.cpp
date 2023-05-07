@@ -1,8 +1,8 @@
 #include <iostream>
 using namespace std;
 
-void insertNextItem(int a[], int i);
 void insertionSort(int a[], int n);
+void insertNextItem(int a[], int i, int n);
 
 int main()
 {
@@ -33,7 +33,7 @@ void insertionSort(int a[], int n)
 	int i;
 	for (i = 1; i < n; i++)
 	{
-		insertNextItem(a, i);
+		insertNextItem(a, i, n);
 	}
 	for (i = 0; i < n; i++)
 	{
@@ -41,12 +41,17 @@ void insertionSort(int a[], int n)
 	}
 }
 
-void insertNextItem(int a[], int i)
+void insertNextItem(int a[], int i, int n)
 {
 	int newItem(a[i]), insertPos(i);
 	for (; insertPos && newItem < a[insertPos - 1]; insertPos--)
 	{
 		a[insertPos] = a[insertPos - 1];
 		a[insertPos - 1] = newItem;
+		for (i = 0; i < n; i++)
+		{
+			cout << a[i] << " ";
+		}
+		cout << endl;
 	}
 }

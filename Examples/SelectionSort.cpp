@@ -1,9 +1,9 @@
 ﻿#include <iostream>
 using namespace std;
 
-void fillArray(int* a, int size, int& numberUsed);
+void fillArray(int *a, int size, int &numberUsed);
 void selectionSort(int a[], int n);
-void swapValues(int& v1, int& v2);
+void swapValues(int &v1, int &v2);
 int minSelect(int a[], int n);
 
 const int NSIZE = 10;
@@ -23,10 +23,10 @@ int main()
 	return 0;
 }
 
-void fillArray(int* a, int size, int& numberUsed)
+void fillArray(int *a, int size, int &numberUsed)
 {
 	cout << " enter up to " << size << " nonnegative whole numbers" << endl
-		<< "Mark the end of the list with a negative number" << endl;
+			 << "Mark the end of the list with a negative number" << endl;
 	int next, index = 0;
 	cin >> next;
 	while ((next >= 0) && (index < size))
@@ -48,22 +48,26 @@ void selectionSort(int a[], int n)
 		minPos = minSelect(a, last + 1);
 		swapValues(a[minPos], a[last]);
 		last--;
+		cout << "Partial Sorted results" << endl;
+		for (int index = 0; index < n; index++)
+			cout << a[index] << " ";
+		cout << endl;
 	}
 }
 
-void swapValues(int& v1, int& v2)
+void swapValues(int &v1, int &v2)
 {
 	int temp;
 	temp = v1;
 	v1 = v2;
 	v2 = temp;
-
 }
 
 int minSelect(int a[], int n)
 {
 	int minPos(0), currentPos(1);
-	while (currentPos < n) {
+	while (currentPos < n)
+	{
 		// Invariant: a[maxPos] >= a[0] ... a[currentPos-1]
 		if (a[currentPos] < a[minPos])
 			minPos = currentPos;

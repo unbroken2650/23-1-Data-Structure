@@ -8,11 +8,8 @@ class List
 {
 public:
 	List();
-	~List();
 	void insert(const ListElementType& elem);
-	void insertFront(const ListElementType& elem);
 	bool first(ListElementType& elem);
-	bool last(ListElementType& elem);
 	void remove(const ListElementType& target);
 	bool next(ListElementType& elem);
 private:
@@ -24,7 +21,6 @@ private:
 		Link next;
 	};
 	Link head;
-	Link tail;
 	Link current;
 };
 
