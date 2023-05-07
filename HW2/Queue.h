@@ -43,7 +43,7 @@ Queue <queueElementType>::Queue()
 
 template <class queueElementType>
 Queue <queueElementType>::~Queue()
-{
+{ -
 }
 
 
