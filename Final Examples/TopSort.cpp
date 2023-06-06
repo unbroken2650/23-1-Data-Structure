@@ -8,6 +8,11 @@
 using namespace std;
 
 int main() {
+	string name = "Suho Han";
+	int number = 20192650;
+
+	cout << number << " " << name << endl;
+
 	const char* inFileName = "graph.dat";
 	ifstream ifs(inFileName);
 	assert(ifs);
@@ -67,7 +72,7 @@ int main() {
 	}
 	cout << "Oredering for top sort: \n";
 	while (!sortedEdges.isEmpty()) {
-		cout << sortedEdges.dequeue() << '/t';
+		cout << sortedEdges.dequeue() << endl;
 	}
 	cout << endl;
 	return n;
